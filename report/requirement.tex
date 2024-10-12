@@ -1,0 +1,38 @@
+\setsection{Chương 4: Các yêu cầu chức năng}
+\setcounter{section}{4}
+
+\phantomsection
+\subsection{Xem tình hình đặt chỗ}
+\setcounter{figure}{0}
+
+\vspace{0.5em}
+\textbf{Mô tả và mức ưu tiên:} chức năng này giúp lễ tân xem thông tin đặt chỗ của khách hàng để chủ động sắp xếp, bố trí nguồn lực khi khách đến, độ ưu tiên cao
+
+\textbf{Tác nhân / Chuỗi đáp ứng:} Người dùng đăng nhập vào ứng dụng với tài khoản hợp lệ sau đó chọn vào tab đặt chỗ hiển thị trên màn hình để xem tình hình đặt chỗ
+
+
+\begin{longtblr}[caption = {Đặc tả usecase Cập nhật diễn biến trận đấu},
+    label = {tab:usecase1-spec},]{colspec={|l|p{.7\linewidth}|}}
+    \hline
+    \textbf{Mã yêu cầu} & \textbf{LT01}                                                                                                \\\hline
+    Tên yêu cầu         & Xem tình hình đặt chỗ \\\hline
+    Mục đích            & Giúp lễ tân xem tình hình đặt chỗ của khách                                                                                                                 \\\hline
+    Đối tượng sử dụng   & Lễ tân                                                                                                                                \\\hline
+    Tiền điều kiện      & Đăng nhập vào ứng dụng với mặt khẩu và tài khoản hợp lệ \\\hline
+    Cách xử lý          &
+    \begin{minipage}{\linewidth}
+    \vskip 4pt 
+    \begin{enumerate}
+        \item Lễ tân nhấn chọn tab đặt chỗ
+        \item Chương trình sẽ hiển thị toàn bộ không tin đặt chỗ trong ngày
+        \item Lễ tân nhấn vào thông tin đặt chỗ của từng khách hàng để xem chi tiết
+        \item Chương trình hiển thị thông tin đặt chỗ chi tiết của khách hàng   
+    \end{enumerate}
+    \vskip 1pt
+    \end{minipage}
+    \\\hline
+    Kết quả             & Hệ thống hiển thị thông tin đặt chỗ chi tiết của khách hàng                                                                                                                          \\\hline
+    Ghi chú             &                                                                    \\\hline
+\end{longtblr}
+
+% ===================================

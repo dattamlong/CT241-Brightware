@@ -1,5 +1,6 @@
 \documentclass[a4paper]{article} % Create new a report
 \usepackage[utf8]{inputenc}
+\usepackage[unicode]{hyperref}
 \usepackage[T5]{fontenc} % To use unicode
 \usepackage{array} % Required for Table Column Text Alignment with Custom Widths
 \usepackage{caption}
@@ -8,7 +9,6 @@
 \usepackage{float} % Set position of image.
 \usepackage{forloop}
 \usepackage{graphicx} % Required for inserting images
-\usepackage{hyperref}
 \usepackage{indentfirst}
 \usepackage{listings}
 \usepackage{lipsum}
@@ -25,6 +25,7 @@
 \usepackage{titlesec} % Set font style
 \usepackage{tocloft}
 \usepackage{xcolor}
+\usepackage{longtable}
 \usepackage{xparse}
 \usepackage{multirow}
 \usepackage{colortbl}
@@ -39,6 +40,15 @@
 \usepackage{./config/heading}
 \usepackage{./config/fancy}
 \usepackage{./config/figure}
+\usepackage{./config/code}
+
+% Link to figure
+% \usepackage[unicode]{hyperref}
+\newcommand{\myref}[1]{\textbf{\hyperref[#1]{Hình~\ref*{#1}}}}
+\newcommand{\myreftb}[1]{\textbf{\hyperref[#1]{Bảng~\ref*{#1}}}}
+
+\DefTblrTemplate{contfoot-text}{default}{Tiếp tục bên trang tiếp theo}
+\DefTblrTemplate{conthead-text}{default}{(Tiếp tục)}
 
 \renewcommand{\baselinestretch}{1.2}
 \setlist[itemize,1]{label=--, itemsep=0pt, topsep=0pt}
@@ -48,15 +58,15 @@
 \newcommand{\setsection}[1]{\section*{\texorpdfstring{\MakeTextUppercase{#1}}{#1}}\addcontentsline{toc}{section}{\texorpdfstring{\MakeTextUppercase{#1}}{#1}}}
 \newcommand{\setsubsection}[1]{\subsection*{\texorpdfstring{\MakeTextUppercase{#1}}{#1}}\addcontentsline{toc}{subsection}{\texorpdfstring{\MakeTextUppercase{#1}}{#1}}}
 
-\DefTblrTemplate{contfoot-text}{default}{Tiếp tục bên trang tiếp theo}
-\DefTblrTemplate{conthead-text}{default}{(Tiếp tục)}
-
 % =========================== START DOCUMENT ==================================
 \begin{document}
 \pagenumbering{roman} % Đánh số thứ tự la mã
 
-\include{coverPage}
+\pagenumbering{arabic}
 
+\include{coverPage}
+\input{list}
+\newpage
 % \include{evaluete}
 
 % \include{thanks}
@@ -65,8 +75,9 @@
 
 % \include{general}
 
-\include{specification}
-
+% \include{specification}
+\newpage
+\include{requirement}
 
 \pagenumbering{arabic} % Đánh số thứ tự số
 
