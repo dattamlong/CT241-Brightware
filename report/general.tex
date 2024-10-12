@@ -1,0 +1,46 @@
+\phantomsection
+\setsection{Chương 1: Tổng quan}
+\setcounter{section}{1}
+
+% \section*{\centering CHƯƠNG 1: TỔNG QUAN}
+\phantomsection
+\subsection{Mô tả về bài toán}
+Bài toán phân công công việc cho nhân viên (Job Assignment Problem) là một bài toán tối ưu hóa quan trọng trong quản lý nguồn lực và tổ chức công việc. Trong bài toán này, giả sử có N công nhân và N công việc, và mỗi công nhân có thể được phân công thực hiện bất kỳ công việc nào. Chi phí cho việc phân công công việc có thể thay đổi tùy theo sự kết hợp giữa công nhân và công việc. Mục tiêu là phân công tất cả các công việc sao cho mỗi công nhân được phân công đúng một công việc và mỗi công việc được thực hiện bởi đúng một công nhân, đồng thời tổng chi phí của sự phân công là nhỏ nhất.
+
+Để giải quyết bài toán này, có thể áp dụng một số thuật toán tối ưu khác nhau, bao gồm thuật toán tham ăn (greedy), thuật toán Brute Force, thuật toán Hungarian, và thuật toán nhánh và cận (Branch and Bound). Thuật toán tham ăn, mặc dù đơn giản và dễ triển khai, có thể không luôn tìm ra giải pháp tối ưu nhất do đặc thù của các lựa chọn cục bộ. Thuật toán Brute Force thử tất cả các giải pháp có thể, đảm bảo tìm ra kết quả chính xác, nhưng thường không thực tế đối với các bài toán lớn do tốn nhiều tài nguyên tính toán. Thuật toán Hungarian được sử dụng hiệu quả trong các bài toán phân công công việc, cung cấp giải pháp tối ưu cho bài toán ghép cặp. Thuật toán nhánh và cận chia nhỏ bài toán thành các phần con và cắt bỏ các giải pháp không khả thi, nhưng có thể tốn kém về mặt tính toán.
+
+\phantomsection
+\subsection{Mục tiêu của đề tải}
+Đề tài này nhằm mục tiêu phát triển và áp dụng các phương pháp tối ưu hóa để cải thiện hiệu quả phân công công việc cho nhân viên trong tổ chức. Cụ thể, mục tiêu là xây dựng một hệ thống phân công công việc cho nhân viên sao cho mỗi công việc được giao cho đúng một nhân viên và mỗi nhân viên chỉ thực hiện một công việc, đồng thời tối thiểu hóa tổng chi phí liên quan đến phân công này. Để đạt được mục tiêu này, đề tài sẽ nghiên cứu và áp dụng các thuật toán tối ưu như thuật toán tham ăn (greedy), thuật toán Brute Force, thuật toán Hungarian, và thuật toán nhánh và cận (Branch and Bound). Qua việc áp dụng các thuật toán này, đề tài hướng đến mục tiêu cải thiện quy trình phân công công việc, đảm bảo sự phân bổ tài nguyên hợp lý, và nâng cao hiệu quả công việc, từ đó đạt được sự cân bằng tốt nhất giữa chi phí và hiệu suất công việc.
+
+\phantomsection
+\subsection{Hướng giải quyết và kế hoạch thực hiện}
+Để giải quyết bài toán phân công công việc cho nhân viên, đề tài sẽ được thực hiện theo các bước chính sau:
+\begin{itemize} 
+    \item \textbf{Phân tích bài toán}: Đầu tiên, cần hiểu rõ về cấu trúc của bài toán phân công công việc, bao gồm số lượng công việc và nhân viên, cách tính chi phí, và các ràng buộc liên quan. Phân tích này sẽ giúp định hình mô hình toán học và các tham số cần thiết cho việc giải quyết bài toán.
+     
+    \item \textbf{Nghiên cứu các thuật toán tối ưu}: Tìm hiểu sâu về các thuật toán như tham ăn (greedy), Brute Force, Hungarian, và Branch and Bound. Phân tích ưu và nhược điểm của từng thuật toán trong việc giải quyết bài toán phân công công việc để lựa chọn phương pháp phù hợp nhất.
+
+    \item \textbf{Xây dựng mô hình toán học}: Mô hình bài toán sẽ được xây dựng dưới dạng bài toán tối ưu hóa tuyến tính, với mục tiêu là tối thiểu hóa tổng chi phí phân công công việc. Các biến quyết định, hàm mục tiêu, và các ràng buộc sẽ được mô tả rõ ràng trong mô hình này.
+    
+    \item \textbf{Cài đặt và triển khai các thuật toán}: Dựa trên các thuật toán đã nghiên cứu, đề tài sẽ tiến hành cài đặt và triển khai các thuật toán này trên hệ thống. Đặc biệt, thuật toán Hungarian sẽ được tập trung vì đây là phương pháp mạnh mẽ và hiệu quả trong việc giải quyết bài toán phân công công việc.
+    
+    \item \textbf{Thử nghiệm và đánh giá hiệu suất}: Sau khi cài đặt, các thuật toán sẽ được thử nghiệm trên các bộ dữ liệu khác nhau để đánh giá hiệu quả phân công công việc và tổng chi phí. Đánh giá sẽ dựa trên các tiêu chí như thời gian thực thi, chi phí phân công, và độ chính xác của giải pháp.
+    
+    \item \textbf{So sánh các thuật toán}: Sau khi thử nghiệm, kết quả từ các thuật toán sẽ được so sánh để xác định thuật toán nào tối ưu hơn cho bài toán phân công công việc. Những ưu nhược điểm của mỗi thuật toán sẽ được thảo luận để rút ra kết luận chính xác về hiệu quả của từng phương pháp.
+    
+    \item \textbf{Tổng kết và đề xuất cải tiến}: Cuối cùng, dựa trên kết quả nghiên cứu và thử nghiệm, đề tài sẽ đưa ra tổng kết và đề xuất các cải tiến tiềm năng cho hệ thống phân công công việc. Các hướng nghiên cứu tiếp theo cũng sẽ được đưa ra để phát triển bài toán phân công công việc trong các tình huống thực tế phức tạp hơn.
+\end{itemize}
+
+Kế hoạch thực hiện đề tài sẽ được chia thành các giai đoạn sau:
+\begin{itemize} 
+    \item Giai đoạn 1: Tìm hiểu và phân tích bài toán (tuần 4 - 5) 
+    
+    \item Giai đoạn 2: Nghiên cứu các thuật toán tối ưu (tuần 6 - 7) 
+    
+    \item Giai đoạn 3: Xây dựng mô hình toán học và triển khai thuật toán (tuần 8 - 10) 
+    
+    \item Giai đoạn 4: Kiểm thử và hoàn thiện sản phẩm (tuần 11 - 14) 
+    
+    \item Giai đoạn 5: Tổng kết và viết quyển báo cáo (tuần 15) 
+\end{itemize}
