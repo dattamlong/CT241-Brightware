@@ -26,6 +26,10 @@
 \usepackage{tocloft}
 \usepackage{xcolor}
 \usepackage{xparse}
+\usepackage{multirow}
+\usepackage{colortbl}
+\usepackage[utf8]{vietnam}
+\usepackage{array}
 
 \usepackage[right=2cm,left=3cm,top=2cm,bottom=2.5cm]{geometry}
 \usepackage[fontsize=13pt]{scrextend}
@@ -33,8 +37,8 @@
 \usetikzlibrary{calc}
 
 \usepackage{./config/heading}
-% \usepackage{./config/fancy}
-% \usepackage{./config/figure}
+\usepackage{./config/fancy}
+\usepackage{./config/figure}
 
 \renewcommand{\baselinestretch}{1.2}
 \setlist[itemize,1]{label=--, itemsep=0pt, topsep=0pt}
@@ -53,11 +57,15 @@
 
 \include{coverPage}
 
-\include{evaluete}
+% \include{evaluete}
 
-\include{thanks}
+% \include{thanks}
 
-\include{general}
+% \include{introduce}
+
+% \include{general}
+
+\include{specification}
 
 
 \pagenumbering{arabic} % Đánh số thứ tự số

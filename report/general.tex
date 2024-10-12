@@ -1,46 +1,175 @@
 \phantomsection
-\setsection{Chương 1: Tổng quan}
-\setcounter{section}{1}
-
-% \section*{\centering CHƯƠNG 1: TỔNG QUAN}
+\setsection{Chương 2: Mô Tả Tổng quan}
+\setcounter{section}{2}
 \phantomsection
-\subsection{Mô tả về bài toán}
-Bài toán phân công công việc cho nhân viên (Job Assignment Problem) là một bài toán tối ưu hóa quan trọng trong quản lý nguồn lực và tổ chức công việc. Trong bài toán này, giả sử có N công nhân và N công việc, và mỗi công nhân có thể được phân công thực hiện bất kỳ công việc nào. Chi phí cho việc phân công công việc có thể thay đổi tùy theo sự kết hợp giữa công nhân và công việc. Mục tiêu là phân công tất cả các công việc sao cho mỗi công nhân được phân công đúng một công việc và mỗi công việc được thực hiện bởi đúng một công nhân, đồng thời tổng chi phí của sự phân công là nhỏ nhất.
 
-Để giải quyết bài toán này, có thể áp dụng một số thuật toán tối ưu khác nhau, bao gồm thuật toán tham ăn (greedy), thuật toán Brute Force, thuật toán Hungarian, và thuật toán nhánh và cận (Branch and Bound). Thuật toán tham ăn, mặc dù đơn giản và dễ triển khai, có thể không luôn tìm ra giải pháp tối ưu nhất do đặc thù của các lựa chọn cục bộ. Thuật toán Brute Force thử tất cả các giải pháp có thể, đảm bảo tìm ra kết quả chính xác, nhưng thường không thực tế đối với các bài toán lớn do tốn nhiều tài nguyên tính toán. Thuật toán Hungarian được sử dụng hiệu quả trong các bài toán phân công công việc, cung cấp giải pháp tối ưu cho bài toán ghép cặp. Thuật toán nhánh và cận chia nhỏ bài toán thành các phần con và cắt bỏ các giải pháp không khả thi, nhưng có thể tốn kém về mặt tính toán.
-
+\subsection{Bối cảnh sản phẩm}
+Hệ thống Quản lý Nhà hàng CUKCUK được phát triển như một sản phẩm mới, độc lập, nhằm đáp ứng nhu cầu ngày càng tăng của các nhà hàng trong việc quản lý hoạt động kinh doanh một cách hiệu quả. Sản phẩm này không phải là một phiên bản kế tiếp của một sản phẩm nào đã tồn tại trước đó, mà là một giải pháp toàn diện, kết hợp nhiều chức năng từ đặt chỗ, ghi order, đến quản lý chế biến và thanh toán trong một hệ thống duy nhất.
 \phantomsection
-\subsection{Mục tiêu của đề tải}
-Đề tài này nhằm mục tiêu phát triển và áp dụng các phương pháp tối ưu hóa để cải thiện hiệu quả phân công công việc cho nhân viên trong tổ chức. Cụ thể, mục tiêu là xây dựng một hệ thống phân công công việc cho nhân viên sao cho mỗi công việc được giao cho đúng một nhân viên và mỗi nhân viên chỉ thực hiện một công việc, đồng thời tối thiểu hóa tổng chi phí liên quan đến phân công này. Để đạt được mục tiêu này, đề tài sẽ nghiên cứu và áp dụng các thuật toán tối ưu như thuật toán tham ăn (greedy), thuật toán Brute Force, thuật toán Hungarian, và thuật toán nhánh và cận (Branch and Bound). Qua việc áp dụng các thuật toán này, đề tài hướng đến mục tiêu cải thiện quy trình phân công công việc, đảm bảo sự phân bổ tài nguyên hợp lý, và nâng cao hiệu quả công việc, từ đó đạt được sự cân bằng tốt nhất giữa chi phí và hiệu suất công việc.
 
-\phantomsection
-\subsection{Hướng giải quyết và kế hoạch thực hiện}
-Để giải quyết bài toán phân công công việc cho nhân viên, đề tài sẽ được thực hiện theo các bước chính sau:
-\begin{itemize} 
-    \item \textbf{Phân tích bài toán}: Đầu tiên, cần hiểu rõ về cấu trúc của bài toán phân công công việc, bao gồm số lượng công việc và nhân viên, cách tính chi phí, và các ràng buộc liên quan. Phân tích này sẽ giúp định hình mô hình toán học và các tham số cần thiết cho việc giải quyết bài toán.
-     
-    \item \textbf{Nghiên cứu các thuật toán tối ưu}: Tìm hiểu sâu về các thuật toán như tham ăn (greedy), Brute Force, Hungarian, và Branch and Bound. Phân tích ưu và nhược điểm của từng thuật toán trong việc giải quyết bài toán phân công công việc để lựa chọn phương pháp phù hợp nhất.
-
-    \item \textbf{Xây dựng mô hình toán học}: Mô hình bài toán sẽ được xây dựng dưới dạng bài toán tối ưu hóa tuyến tính, với mục tiêu là tối thiểu hóa tổng chi phí phân công công việc. Các biến quyết định, hàm mục tiêu, và các ràng buộc sẽ được mô tả rõ ràng trong mô hình này.
-    
-    \item \textbf{Cài đặt và triển khai các thuật toán}: Dựa trên các thuật toán đã nghiên cứu, đề tài sẽ tiến hành cài đặt và triển khai các thuật toán này trên hệ thống. Đặc biệt, thuật toán Hungarian sẽ được tập trung vì đây là phương pháp mạnh mẽ và hiệu quả trong việc giải quyết bài toán phân công công việc.
-    
-    \item \textbf{Thử nghiệm và đánh giá hiệu suất}: Sau khi cài đặt, các thuật toán sẽ được thử nghiệm trên các bộ dữ liệu khác nhau để đánh giá hiệu quả phân công công việc và tổng chi phí. Đánh giá sẽ dựa trên các tiêu chí như thời gian thực thi, chi phí phân công, và độ chính xác của giải pháp.
-    
-    \item \textbf{So sánh các thuật toán}: Sau khi thử nghiệm, kết quả từ các thuật toán sẽ được so sánh để xác định thuật toán nào tối ưu hơn cho bài toán phân công công việc. Những ưu nhược điểm của mỗi thuật toán sẽ được thảo luận để rút ra kết luận chính xác về hiệu quả của từng phương pháp.
-    
-    \item \textbf{Tổng kết và đề xuất cải tiến}: Cuối cùng, dựa trên kết quả nghiên cứu và thử nghiệm, đề tài sẽ đưa ra tổng kết và đề xuất các cải tiến tiềm năng cho hệ thống phân công công việc. Các hướng nghiên cứu tiếp theo cũng sẽ được đưa ra để phát triển bài toán phân công công việc trong các tình huống thực tế phức tạp hơn.
+\subsection{Các chức năng của sản phẩm}
+\vspace{0.5em}
+\textbf{Lễ tân}: quản lý đặt chỗ chặt chẽ tránh sai sót
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Xem tình hình đặt chỗ của khách hàng
+    \item Ghi nhận việc đặt chỗ của khách hàng
+    \item Hủy thông tin đặt chỗ của khách hàng
 \end{itemize}
 
-Kế hoạch thực hiện đề tài sẽ được chia thành các giai đoạn sau:
-\begin{itemize} 
-    \item Giai đoạn 1: Tìm hiểu và phân tích bài toán (tuần 4 - 5) 
-    
-    \item Giai đoạn 2: Nghiên cứu các thuật toán tối ưu (tuần 6 - 7) 
-    
-    \item Giai đoạn 3: Xây dựng mô hình toán học và triển khai thuật toán (tuần 8 - 10) 
-    
-    \item Giai đoạn 4: Kiểm thử và hoàn thiện sản phẩm (tuần 11 - 14) 
-    
-    \item Giai đoạn 5: Tổng kết và viết quyển báo cáo (tuần 15) 
+\textbf{Phục vụ}: Ghi order nhanh chóng, tiếp kiệm nhân công
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Ghi nhân thông tin order của khách hàng
+    \item Xem thông tin mã thẻ voucher đã sử dụng
 \end{itemize}
+
+\textbf{Nhân viên bếp}: Quản lý chế biến hiệu quả hạn chế thiếu sót
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Nhận và xem yêu cầu chế biến từ nhân viên phục vụ
+    \item Cập nhật trạng thái của món ăn đang chế biến
+    \item Quản lý nguyên liệu chế biến trong bếp
+    \begin{itemize}[leftmargin=1cm, label={+}]
+        \item Kiểm tra số lượng nguyên liệu
+        \item yêu cầu bổ sung nguyên liệu  
+    \end{itemize}
+    \item Tra cứu lịch sử chế biến món ăn
+    \item Cập nhật tình trạng món hết nguyên liệu
+\end{itemize}
+    
+\textbf{Chạy bàn}: Trả món kịp thời tránh để khác chờ lâu
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Chức năng xem danh sách món đã chế biến
+    \item Cập nhật trạng thái của món ăn đang chế biến
+    \item Quản lý nguyên liệu chế biến trong bếp
+    \item Tra cứu lịch sử chế biến món ăn
+    \item Cập nhật tình trạng món hết nguyên liệu
+\end{itemize}
+
+\textbf{Thu ngân}: Tính tiền nhanh chóng, chính xác
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Thanh toán
+\end{itemize}
+
+\textbf{Người quản lý}: Đáp ứng tất cả nghiệp vụ quản lý nhà hàng đơn giản và hiệu quả
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Quản lý mua hàng
+    \item Quản lý tồn kho vật liệu
+    \item Quản lý khuyến mãi
+    \item Quản lý Thu chi tiền
+    \item Quản lý thực đơn
+    \item Quản lý nhân viên
+    \item Quản lý khách hàng
+\end{itemize}
+\phantomsection
+
+
+\subsection{Các lớp người dùng và đặc điểm}
+\vspace{0.5em}
+\subsubsection{Nhân viên lễ tân}
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item \textbf{Mô tả}: Là nhân viên làm việc tại quầy lễ tân của nhà hàng, có trách nhiệm tiếp đón khách hàng và quản lý đặt chỗ.
+    \item \textbf{Chức năng sử dụng}: Đăng nhập vào phần mềm để ghi nhận và hủy đặt chỗ, kiểm tra tình trạng chỗ trống, và ghi nhận yêu cầu của khách hàng.
+\end{itemize}
+
+\phantomsection
+\subsubsection{Nhân viên phục vụ}
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item \textbf{Mô tả}: Là nhân viên phục vụ tại nhà hàng, chịu trách nhiệm ghi order và phục vụ khách hàng.
+    \item \textbf{Chức năng sử dụng}: Đăng nhập vào phần mềm để ghi order, cập nhật trạng thái đơn hàng và yêu cầu thanh toán.
+\end{itemize}
+
+\phantomsection
+\subsubsection{Nhân viên chạy bàn}
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item \textbf{Mô tả}: Là nhân viên hỗ trợ sắp xếp và quản lý chỗ ngồi cho khách hàng trong nhà hàng.
+    \item \textbf{Chức năng sử dụng}: Sử dụng phần mềm để kiểm soát tình hình phục vụ và hỗ trợ nhân viên lễ tân.
+\end{itemize}
+
+\phantomsection
+\subsubsection{Nhân viên bếp}
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item \textbf{Mô tả}: Là nhân viên chế biến món ăn trong bếp của nhà hàng, nhận yêu cầu từ nhân viên phục vụ.
+    \item \textbf{Chức năng sử dụng}: Đăng nhập vào phần mềm để nhận yêu cầu chế biến, cập nhật tình trạng món ăn và theo dõi tình hình chế biến.
+\end{itemize}
+
+\phantomsection
+\subsubsection{Nhân viên thu ngân}
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item \textbf{Mô tả}: Là nhân viên đảm nhiệm việc thanh toán cho khách hàng tại quầy thu ngân của nhà hàng.
+    \item \textbf{Chức năng sử dụng}: Đăng nhập vào phần mềm để tính tiền và xử lý các giao dịch thanh toán cho khách hàng.
+\end{itemize}
+
+\phantomsection
+\subsubsection{Người quản lý}
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item \textbf{Mô tả}: Là người quản lý hoạt động của nhà hàng, theo dõi và điều hành các hoạt động của nhân viên.
+    \item \textbf{Chức năng sử dụng}: Đăng nhập vào phần mềm để theo dõi doanh thu, quản lý nhân viên, và phân tích báo cáo hiệu suất.
+\end{itemize}
+\phantomsection
+
+
+\subsection{Môi trường vận hành}
+\vspace{0.5em}
+\textbf{App Brightware bán hàng}: 
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Chạy trên máy tính bảng/máy AnyPOS hoặc trên máy tính/máy POS (chạy hệ điều hành từ iOS 8.0 trở lên. Hỗ trợ các dòng điện thoại từ iPhone 5 trở lên, iPad từ iPad 4 trở lên. Chạy hệ điều hành Android từ 4.0.3 trở lên).
+    \item Dành cho Thu ngân, nhân viên phục vụ, Lễ tân.
+\end{itemize}
+
+\textbf{App Brightware bếp/Bar}: 
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Chạy trên tất cả các máy tính bảng Android hệ điều hành từ Android 4.0.3 trở lên.
+    \item Dành cho nhân viên bếp.
+\end{itemize}
+
+\textbf{App Brightware chạy bàn}: 
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Nên sử dụng các dòng Sony Android Tivi để cài đặt.
+    \item Dành cho nhân viên chạy bàn.
+\end{itemize}
+
+\textbf{App Brightware quản lý}: 
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Chạy trên iPhone, iPad hệ điều hành từ iOS 8.0 trở lên. Hỗ trợ các dòng điện thoại từ iPhone 5 trở lên, iPad từ iPad 4 trở lên.
+    \item Chạy trên Android hệ điều hành từ Android 4.0.3 trở lên.
+\end{itemize}
+\phantomsection
+
+\subsection{Ràng buộc về Thiết kế và Triển khai}
+\vspace{0.5em}
+\textbf{Chức năng cơ bản}: Phần mềm quản lý quán ăn phải đáp ứng các chức năng thiết yếu như quản lý đặt chỗ, ghi order, theo dõi tình trạng chế biến và xử lý thanh toán.
+
+\textbf{Thời gian hoàn thành}: Dự án cần hoàn thành trong vòng 1 năm, đáp ứng yêu cầu và mong đợi từ đầu.
+
+\textbf{Chi phí dự án}: Ngân sách cho dự án được xác định là 600 triệu đồng, yêu cầu quản lý tài chính hiệu quả.
+
+\textbf{Tiến độ dự án}: Đội ngũ phát triển phải báo cáo tiến độ thường xuyên, chi tiết và rõ ràng về các giai đoạn xây dựng.
+\phantomsection
+
+
+\subsection{Tài liệu hướng dẫn}
+\vspace{0.5em}
+\textbf{Hướng dẫn theo từng nghiệp vụ}:
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Hướng dẫn nghiệp vụ cho nhà hàng vừa và lớn
+    \item Hướng dẫn nghiệp vụ cho nhà hàng nhỏ và siêu nhỏ
+    \item Nghiệp vụ chăm sóc khách hàng Lomas
+\end{itemize}
+
+\textbf{Hướng dẫn theo loại hình}:
+\begin{itemize}[leftmargin=1.5cm, label={--}]
+    \item Nhà hàng đặc sản
+    \item Quán café/Chè/Kem
+    \item Nhậu/Lẩu/Nướng
+    \item Trà sữa/Thức ăn nhanh
+    \item Nhà hàng Buffet
+    \item Bar/Pub
+    \item Cơm văn phòng
+    \item Nhà hàng tiệc
+\end{itemize}
+
+\subsection{Giả định và Phụ thuộc}
+\vspace{0.5em}
+Phần mềm quản lý quán ăn phải được cài đặt trên hệ thống máy chủ của nhà hàng và kết nối với cơ sở dữ liệu quản lý của nhà hàng. Nếu không được cài đặt trực tiếp trên máy chủ của nhà hàng mà cài đặt trên thiết bị khác, thì hệ thống vẫn phải kết nối được với cơ sở dữ liệu trung tâm của nhà hàng để có thể thực hiện các thao tác nghiệp vụ như quản lý đặt chỗ, ghi order, và theo dõi tình trạng chế biến.
+
+
+

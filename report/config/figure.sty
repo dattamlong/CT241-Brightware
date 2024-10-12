@@ -1,8 +1,8 @@
-\newcommand{\figmini}[4][.93]{%
+\newcommand{\figmini}[4][.95]{%
   \par
   \begin{center}
     \begin{minipage}{#1\linewidth}
-      \captionsetup{type=figure, width=.93\linewidth}
+      \captionsetup{type=figure, width=.95\linewidth}
       \includegraphics[width=\linewidth]{#2}
       \caption{\centering #4}
       \label{#3}
@@ -10,6 +10,17 @@
   \end{center}
 }
 
+\newcommand{\fimobile}[4][.7]{%
+  \par
+  \begin{center}
+    \begin{minipage}{#1\linewidth}
+      \captionsetup{type=figure, width=.7\linewidth}
+      \includegraphics[width=\linewidth]{#2}
+      \caption{\centering #4}
+      \label{#3}
+    \end{minipage}%
+  \end{center}
+}
 
 \newcommand{\figminiskip}[4][.93]{%
   \begin{minipage}{#1\linewidth}
